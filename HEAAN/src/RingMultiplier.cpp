@@ -232,6 +232,7 @@ void RingMultiplier::mult(ZZ* x, ZZ* a, ZZ* b, long np, const ZZ& mod) {
 	delete[] rx;
 }
 
+// 使用NTT（数论变化）来加速多项式乘法
 void RingMultiplier::multNTT(ZZ* x, ZZ* a, uint64_t* rb, long np, const ZZ& mod) {
 	uint64_t* ra = new uint64_t[np << logN]();
 	uint64_t* rx = new uint64_t[np << logN]();
