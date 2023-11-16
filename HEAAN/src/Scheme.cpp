@@ -151,6 +151,7 @@ void Scheme::addRightRotKey(SecretKey& secretKey, long r) {
 	}
 }
 
+// 一次性添加多个位移秘钥
 void Scheme::addLeftRotKeys(SecretKey& secretKey) {
 	for (long i = 0; i < logN - 1; ++i) {
 		long idx = 1 << i;
